@@ -1,0 +1,14 @@
+
+<nav>
+
+  <ul>
+    <li class="search">
+      <input type="text" placeholder="Search..." />
+    </li>
+
+    <li *ngFor="let navItem of navItems">
+      <a [class.selected-item]="navItem === selectedItem" (click)="onSelect(navItem)"
+      routerLink="/{{navItem.reference}}">{{navItem.title}}</a>
+    </li>
+  </ul>
+</nav>

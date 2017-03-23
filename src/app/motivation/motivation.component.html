@@ -1,0 +1,40 @@
+<h1>Motivation</h1>
+<div class="tile-grid">
+  <div class="tile half-width">
+    <div class="card">
+      <div class="card-header">
+        <h2>Daily Goals</h2>
+        <button class="add-button"><md-icon>add</md-icon></button>
+      </div>
+      <div class="card-content">
+        <!-- <md-checkbox *ngFor="let goal of goals">{{goal}} <button class="delete-button" md-button>Delete</button></md-checkbox> -->
+        <div class="checkbox-label" *ngFor="let goal of goals">
+          <label><input class="checkbox" type="checkbox" />{{goal}}</label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tile half-width">
+    <div class="card">
+      <h2 class="card-header">Progress</h2>
+      <div class="card-content">
+
+      </div>
+    </div>
+  </div>
+  <div class="tile half-width">
+    <div class="card">
+      <h2 class="card-header">Notifications</h2>
+    </div>
+  </div>
+  <div class="tile half-width">
+    <div class="card">
+      <h2 class="card-header">Events</h2>
+    </div>
+  </div>
+  <div class="tile full-width">
+    <div class="card">
+      <h2 class="card-header">Interests</h2>
+    </div>
+  </div>
+</div>
