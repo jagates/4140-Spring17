@@ -27,12 +27,14 @@
   box-shadow: 3px 0 6px rgba(0,0,0,.24);
   background-color: rgba(245,245,245,1);
   height: 100%;
+  position: relative;
 }
 
 .card-header {
   font-size: 20px;
   padding: 20px;
   padding-bottom: 0px;
+
 }
 .card-header h2{
   display: inline-block;
@@ -45,12 +47,24 @@
   font-weight: 400;
 }
 
-.add-button {
+.card-footer {
+  padding: 20px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.float-right {
   float: right;
+}
+.float-left {
+  float: left;
+}
+.add-button {
   background-color: #98e4c1;
-  box-shadow: 3px 0 6px rgba(0,0,0,.24);
-  width: 40px;
-  height: 40px;
+  box-shadow: 1px 0 1px rgba(0,0,0,.24);
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: none;
 
@@ -59,6 +73,23 @@
   background-color: #70d9a9;
 }
 .add-button:active {
+  box-shadow: none;
+}
+
+.link-button {
+  background-color: #98e4c1;
+  box-shadow: 1px 0 1px rgba(0,0,0,.24);
+  height: 30px;
+  border-radius: 4px;
+  border: none;
+  padding: 0px 10px;
+  margin-left: 10px;
+}
+
+.link-button:hover {
+  background-color: #70d9a9;
+}
+.link-button:active {
   box-shadow: none;
 }
 

@@ -8,7 +8,7 @@
 
     <li *ngFor="let navItem of navItems">
       <a [class.selected-item]="navItem === selectedItem" (click)="onSelect(navItem)"
-      routerLink="/{{navItem.reference}}">{{navItem.title}}</a>
+      routerLink="/{{navItem.reference}}"><md-icon [class.selected-item]="navItem === selectedItem">{{navItem.icon}}</md-icon> {{navItem.title}}</a>
     </li>
   </ul>
 </nav>

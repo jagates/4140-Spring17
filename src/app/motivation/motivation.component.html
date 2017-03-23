@@ -4,37 +4,72 @@
     <div class="card">
       <div class="card-header">
         <h2>Daily Goals</h2>
-        <button class="add-button"><md-icon>add</md-icon></button>
+        <button class="link-button float-right"><md-icon>trending_up</md-icon></button>
       </div>
       <div class="card-content">
         <!-- <md-checkbox *ngFor="let goal of goals">{{goal}} <button class="delete-button" md-button>Delete</button></md-checkbox> -->
         <div class="checkbox-label" *ngFor="let goal of goals">
           <label><input class="checkbox" type="checkbox" />{{goal}}</label>
         </div>
+        <button class="add-button"><md-icon>add</md-icon></button>
+      </div>
+      <div class="card-footer">
       </div>
     </div>
   </div>
   <div class="tile half-width">
     <div class="card">
-      <h2 class="card-header">Progress</h2>
+      <div class="card-header">
+        <h2>Progress</h2>
+        <button class="link-button float-right"><md-icon>trending_up</md-icon></button>
+      </div>
+
       <div class="card-content">
 
       </div>
+      <div class="card-footer">
+      </div>
     </div>
   </div>
   <div class="tile half-width">
     <div class="card">
-      <h2 class="card-header">Notifications</h2>
+      <div class="card-header">
+        <h2>Notifications</h2>
+        <button class="link-button float-right"><md-icon>notifications</md-icon></button>
+      </div>
+      <div class="card-content">
+
+      </div>
+      <div class="card-footer">
+      </div>
     </div>
   </div>
   <div class="tile half-width">
     <div class="card">
-      <h2 class="card-header">Events</h2>
+      <div class="card-header">
+        <h2>Events</h2>
+        <button class="link-button float-right"><md-icon>event</md-icon></button>
+      </div>
+      <div class="card-content">
+
+      </div>
+      <div class="card-footer">
+      </div>
     </div>
+
+
   </div>
   <div class="tile full-width">
     <div class="card">
-      <h2 class="card-header">Interests</h2>
+      <div class="card-header">
+        <h2>Interests</h2>
+        <button class="link-button float-right"><md-icon>favorite</md-icon></button>
+      </div>
+      <div class="card-content">
+
+      </div>
+      <div class="card-footer">
+      </div>
     </div>
   </div>
 </div>
