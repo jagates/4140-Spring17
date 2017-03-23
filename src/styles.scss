@@ -1,0 +1,147 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "scss/colors.scss";
+
+* {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 300;
+  color: $m700;
+}
+h2 {
+  color: rgb(100,100,100);
+}
+div{
+    color: rgb(100,100,100);
+}
+
+button:focus {outline:0;}
+button {
+  background-color: $a400;
+  box-shadow: 1px 0 1px rgba(0,0,0,.24);
+  color: white;
+}
+button:hover {
+  background-color: $a700;
+}
+button:active {
+  box-shadow: none;
+}
+.circle-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: none;
+}
+
+.link-button {
+  height: 30px;
+  border-radius: 4px;
+  border: none;
+  padding: 0px 10px;
+}
+
+
+input[type='checkbox']:focus {outline:0;}
+
+.content-header {
+  font-weight: 300;
+  padding: 25px;
+  color: $a700;
+}
+
+
+input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:25px;
+    height:25px;
+    border-radius:2px;
+    border:2px solid rgb(100,100,100);
+    margin-right: 15px;
+}
+input[type='checkbox']:checked {
+    background: $a400 url("assets/images/check.png") no-repeat center;
+    border-color: $a400;
+    background-size: 20px 20px;
+}
+
+
+/* format for content with cards
+<div class="tile-grid">
+  <div class="tile [half-width/full-width]">
+    <div class="card">
+      <div class="card-header">
+        ...stuff goes here
+      </div>
+      <div class="card-content">
+        ...stuff goes here
+      </div>
+      <div class="card-footer">
+        ...stuff goes here
+      </div>
+    </div>
+  </div>
+  ... more tiles and cards. one card per tile. 
+</div>
+*/
+
+
+.tile-grid {
+  margin-top: 20px;
+  max-width: 900px;
+  font-size: 0px; /* needed to remove default spacing for 'inline-block' on .tile */
+}
+.tile {
+  box-sizing: border-box;
+  padding: 10px 10px 0px 0px;
+  display: inline-block;
+  height: 300px;
+}
+.half-width {
+  width: 450px;
+}
+.full-width {
+  width: 900px;
+}
+
+.card {
+  box-shadow: 3px 0 6px $shadow;
+  background-color: $lightgray;
+  height: 100%;
+  position: relative;
+}
+
+.card-header {
+  font-size: 20px;
+  padding: 20px;
+  padding-bottom: 0px;
+
+}
+.card-header h2{
+  display: inline-block;
+  font-size: 20px;
+}
+
+.card-content {
+  padding: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.card-footer {
+  padding: 20px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
+}

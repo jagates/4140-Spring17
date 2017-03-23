@@ -1,0 +1,33 @@
+/*lightgreen: rgb(152,228,193)*/
+/*mediumgreen: rgb(112,217,169)*/
+/*darkgreen: rgb(72,206,145)*/
+/*lightgray: rgb(245,245,245)*/
+/*mediumgray: rgb(225,225,225)*/
+/*darkgray: rgb(100,100,100)*/
+
+@import "../../scss/colors.scss";
+
+
+
+
+.checkbox-label {
+  margin-bottom: 10px;
+  display: block;
+  height: 25px;
+
+}
+
+.checkbox {
+  margin-bottom: -5px;
+}
+/*.checkbox-label label {
+  line-height: 25px;
+  vertical-align: middle;
+}*/
+
+
+/*
+md-checkbox {
+  display: flex;
+  margin-bottom: 10px;
+}*/

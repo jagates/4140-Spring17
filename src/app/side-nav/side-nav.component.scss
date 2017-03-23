@@ -1,3 +1,4 @@
+@import "../../scss/colors.scss";
 
 nav {
   width: 240px;
@@ -21,16 +22,21 @@ li {
 
 
 a {
+  color: $darkgray;
   display: block;
   height: 50px;
   font-size: 14px;
   padding-left: 15px;
   padding-right: 15px;
-  border-bottom: 1px solid rgba(150, 150, 150, 1);
+  border-bottom: 1px solid $darkgray;
   text-decoration: none;
   text-transform: uppercase;
   line-height: 50px;
   vertical-align: middle;
+}
+
+a:hover {
+  color:$m700;
 }
 
 md-icon {
@@ -39,8 +45,8 @@ md-icon {
 }
 
 .selected-item {
-  background-color: rgba(225,225,225,1);
-  color: rgb(44, 157, 145);
+  background-color: $mediumgray;
+  color: $m700;
   font-weight: 500;
 }
 
@@ -51,5 +57,5 @@ md-icon {
 .search {
   padding: 10px;
   height: 30px;
-  border-bottom: 1px solid rgba(150, 150, 150, 1);
+  border-bottom: 1px solid $darkgray;
 }
