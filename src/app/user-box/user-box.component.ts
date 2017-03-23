@@ -8,7 +8,7 @@ export class User {
 @Component({
   selector: 'app-user-box',
   templateUrl: './user-box.component.html',
-  styleUrls: ['./user-box.component.css']
+  styleUrls: ['./user-box.component.scss']
 })
 export class UserBoxComponent implements OnInit {
   user: User = {name: "John Doe", username: "jdoe45"};

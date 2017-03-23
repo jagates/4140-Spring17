@@ -1,11 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
-/*lightgreen: rgb(152,228,193)*/
-/*mediumgreen: rgb(112,217,169)*/
-/*darkgreen: rgb(72,206,145)*/
-/*lightgray: rgb(245,245,245)*/
-/*mediumgray: rgb(225,225,225)*/
-/*darkgray: rgb(100,100,100)*/
+@import "scss/colors.scss";
 
 * {
   font-family: 'Roboto', sans-serif;
@@ -16,7 +11,7 @@
 
 h1 {
   font-weight: 300;
-  color: rgb(44, 157, 145);
+  color: $m900;
 }
 button:focus {outline:0;}
 input[type='checkbox']:focus {outline:0;}
@@ -24,7 +19,7 @@ input[type='checkbox']:focus {outline:0;}
 .content-header {
   font-weight: 300;
   padding: 25px;
-  color: rgb(44, 157, 145);
+  color: $a700;
 }
 
 md-grid-list {
@@ -43,7 +38,7 @@ input[type='checkbox'] {
     margin-right: 15px;
 }
 input[type='checkbox']:checked {
-    background: rgb(152,228,193) url("assets/images/check.png") no-repeat center;
-    border-color: rgb(152,228,193);
+    background: $a200 url("assets/images/check.png") no-repeat center;
+    border-color: $a200;
     background-size: 20px 20px;
 }

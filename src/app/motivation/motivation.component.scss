@@ -5,6 +5,8 @@
 /*mediumgray: rgb(225,225,225)*/
 /*darkgray: rgb(100,100,100)*/
 
+@import "../../scss/colors.scss";
+
 .tile-grid {
   margin-top: 20px;
   max-width: 900px;
@@ -61,7 +63,7 @@
   float: left;
 }
 .add-button {
-  background-color: #98e4c1;
+  background-color: $a200;
   box-shadow: 1px 0 1px rgba(0,0,0,.24);
   width: 30px;
   height: 30px;
@@ -70,14 +72,14 @@
 
 }
 .add-button:hover {
-  background-color: #70d9a9;
+  background-color: $a400;
 }
 .add-button:active {
   box-shadow: none;
 }
 
 .link-button {
-  background-color: #98e4c1;
+  background-color: $a200;
   box-shadow: 1px 0 1px rgba(0,0,0,.24);
   height: 30px;
   border-radius: 4px;
@@ -87,7 +89,7 @@
 }
 
 .link-button:hover {
-  background-color: #70d9a9;
+  background-color: $a400;
 }
 .link-button:active {
   box-shadow: none;
