@@ -8,7 +8,7 @@ import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { ProfileComponent } from './profile/profile.component';
-import { SideNavComponent } from './side-nav/side-nav.component';
+import { SideNavComponent, settingsDialog } from './side-nav/side-nav.component';
 import { UserBoxComponent } from './user-box/user-box.component';
 import { ContentComponent } from './content/content.component';
 import { MotivationComponent } from './motivation/motivation.component';
@@ -33,6 +33,7 @@ import { EventsComponent } from './events/events.component';
     GroupsComponent,
     PeopleComponent,
     EventsComponent,
+    settingsDialog,
   ],
   imports: [
     BrowserModule,
@@ -67,7 +68,10 @@ import { EventsComponent } from './events/events.component';
     ])
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    settingsDialog,
+  ]
 })
 
 

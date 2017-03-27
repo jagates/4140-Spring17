@@ -10,5 +10,8 @@
       <a [class.selected-item]="navItem === selectedItem" (click)="onSelect(navItem)"
       routerLink="/{{navItem.reference}}"><md-icon [class.selected-item]="navItem === selectedItem">{{navItem.icon}}</md-icon> {{navItem.title}}</a>
     </li>
+    <li>
+      <a (click)="openDialog()"><md-icon>settings</md-icon> Settings</a>
+    </li>
   </ul>
 </nav>

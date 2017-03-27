@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MdDialog, MdDialogRef} from '@angular/material';
 
 export class NavItem {
   title: string;
@@ -12,8 +13,7 @@ const NAVITEMS: NavItem[] = [
   {title: 'Interests', reference: 'interests', icon: 'favorite'},
   {title: 'Groups', reference: 'groups', icon: 'group_work'},
   {title: 'People', reference: 'people', icon: 'face'},
-  {title: 'Events', reference: 'events', icon: 'event'},
-  {title: 'Settings', reference: 'settings', icon: 'settings'}
+  {title: 'Events', reference: 'events', icon: 'event'}
 ];
 
 @Component({
@@ -25,14 +25,29 @@ export class SideNavComponent implements OnInit {
   selectedItem: NavItem;
   navItems = NAVITEMS;
 
-  onSelect(navItem: NavItem): void {
-    this.selectedItem = navItem;
+  constructor(public dialog: MdDialog) {}
+
+  openDialog() {
+    let dialogRef = this.dialog.open(settingsDialog, {
+      height: '400px',
+      width: '600px'
+    });
+    
   }
 
-  constructor() {
+  onSelect(navItem: NavItem): void {
+    this.selectedItem = navItem;
   }
 
   ngOnInit() {
     this.selectedItem = this.navItems[0];
   }
+}
+
+@Component({
+  selector: 'settings-Dialog',
+  templateUrl: '../settingsDialog.html',
+})
+export class settingsDialog {
+  constructor(public dialogRef: MdDialogRef<settingsDialog>) {}
 }

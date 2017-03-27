@@ -1,1 +1,20 @@
 <h1>Interests</h1>
+
+<div class="tile-grid">
+  <div class="tile half-width">
+    <md-card>
+      <md-card-title>
+        Weight Loss
+      </md-card-title>
+      <md-card-content>
+        <md-nav-list dense>
+            <a md-list-item href="..." *ngFor="let wArticle of messages"> 
+                <md-icon md-list-icon>receipt</md-icon>
+                <h3 md-line>{{ wArticle.from }} </h3>
+                <p md-line> {{wArticle.subject}} </p>
+            </a>
+        </md-nav-list>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>
