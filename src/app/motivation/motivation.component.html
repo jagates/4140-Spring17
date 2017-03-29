@@ -1,75 +1,57 @@
 <h1>Motivation</h1>
+
 <div class="tile-grid">
   <div class="tile half-width">
-    <div class="card">
-      <div class="card-header">
-        <h2>Daily Goals</h2>
-        <button class="link-button float-right"><md-icon>trending_up</md-icon></button>
-      </div>
-      <div class="card-content">
-        <!-- <md-checkbox *ngFor="let goal of goals">{{goal}} <button class="delete-button" md-button>Delete</button></md-checkbox> -->
-        <div class="checkbox-label" *ngFor="let goal of goals">
-          <label><input class="checkbox" type="checkbox" />{{goal}}</label>
-        </div>
-        <button class="circle-button"><md-icon>add</md-icon></button>
-      </div>
-      <div class="card-footer">
-      </div>
-    </div>
+    <md-card>
+      <md-card-title>
+        Daily Goals
+        <button class="title-button" md-button><md-icon>trending_up</md-icon></button>
+      </md-card-title>
+      <md-card-content>
+        <md-checkbox *ngFor="let goal of goals">{{goal}}</md-checkbox>
+        <button md-mini-fab><md-icon>add</md-icon></button>
+      </md-card-content>
+    </md-card>
   </div>
+
   <div class="tile half-width">
-    <div class="card">
-      <div class="card-header">
-        <h2>Progress</h2>
-        <button class="link-button float-right"><md-icon>trending_up</md-icon></button>
-      </div>
+    <md-card>
+      <md-card-title>
+        Progress
+        <button class="title-button" md-button><md-icon>trending_up</md-icon></button>
+      </md-card-title>
+      <md-card-content>
 
-      <div class="card-content">
-
-      </div>
-      <div class="card-footer">
-      </div>
-    </div>
+      </md-card-content>
+    </md-card>
   </div>
+
   <div class="tile half-width">
-    <div class="card">
-      <div class="card-header">
-        <h2>Notifications</h2>
-        <button class="link-button float-right"><md-icon>notifications</md-icon></button>
-      </div>
-      <div class="card-content">
+    <md-card>
+      <md-card-title>
+        Interests
+        <button class="title-button" md-button><md-icon>favorite</md-icon></button>
+      </md-card-title>
+      <md-card-content>
+        <md-nav-list >
+          <md-list-item *ngFor="let i of interests">
+             <img src="assets/images/{{i.avatar}}">
+             <a href="">
+               <h3 md-line>{{i.title}}</h3>
+               <p md-line>{{i.source}}</p>
+               <p>{{i.description}}</p>
+             </a>
 
-      </div>
-      <div class="card-footer">
-      </div>
-    </div>
-  </div>
-  <div class="tile half-width">
-    <div class="card">
-      <div class="card-header">
-        <h2>Events</h2>
-        <button class="link-button float-right"><md-icon>event</md-icon></button>
-      </div>
-      <div class="card-content">
+             <div class="upvote">
+               <button class="plain-btn" md-icon-button>
+                  <md-icon>thumb_up</md-icon>
+               </button>
+               <div class="number">{{i.upvotes}}</div>
+             </div>
 
-      </div>
-      <div class="card-footer">
-      </div>
-    </div>
-
-
-  </div>
-  <div class="tile full-width">
-    <div class="card">
-      <div class="card-header">
-        <h2>Interests</h2>
-        <button class="link-button float-right"><md-icon>favorite</md-icon></button>
-      </div>
-      <div class="card-content">
-
-      </div>
-      <div class="card-footer">
-      </div>
-    </div>
+          </md-list-item>
+        </md-nav-list>
+      </md-card-content>
+    </md-card>
   </div>
 </div>

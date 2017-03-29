@@ -7,7 +7,67 @@
 
 @import "../../scss/colors.scss";
 
+.list-item {
 
+}
+.list-item:hover {
+  background-color: $mediumgray;
+}
+
+.upvote {
+  float: right;
+}
+
+.number {
+
+  width: 40px;
+  text-align: center;
+  display: inline-block;
+}
+.plain-btn {
+  background-color: $lightgray;
+  box-shadow: none;
+}
+.plain-btn md-icon {
+  color: $darkgray;
+}
+
+.li-content {
+  display: inline-block;
+}
+
+md-list-item img {
+  width: 50px;
+  height: 50px;
+  margin-left: -10px;
+  margin-right: 10px;
+  border-radius: 10%;
+}
+md-list-item a  {
+  width: 450px;
+}
+md-list-item a h3 {
+  color: $m800;
+  font-size: 15px;
+}
+md-list-item a p {
+  font-size: 12px;
+}
+
+
+md-checkbox {
+  display: block;
+  margin-bottom: 10px;
+}
+button {
+  background-color: $a400;
+}
+button md-icon {
+  color: white;
+}
+.title-button {
+  float: right;
+}
 
 
 .checkbox-label {
