@@ -5,11 +5,20 @@
     <md-card>
       <md-card-title>
         Daily Goals
-        <button class="title-button" md-button><md-icon>trending_up</md-icon></button>
+        <a routerLink="/goals"><button class="title-button" md-button><md-icon>trending_up</md-icon></button></a>
       </md-card-title>
       <md-card-content>
-        <md-checkbox *ngFor="let goal of goals">{{goal}}</md-checkbox>
-        <button md-mini-fab><md-icon>add</md-icon></button>
+        <md-checkbox *ngFor="let goal of goals; let i = index">
+          {{goal}}
+          <button md-icon-button class="delete-btn show-on-hover" (click)=removeGoal(i)><md-icon>delete_forever</md-icon></button>
+        </md-checkbox>
+        <md-checkbox disabled>
+          <md-input-container>
+            <input mdInput placeholder="New Goal" [(ngModel)]="newGoal" (keyup.enter)="addNewGoal()">
+          </md-input-container>
+          <button md-mini-fab (click)="addNewGoal()"><md-icon>add</md-icon></button>
+        </md-checkbox>
+
       </md-card-content>
     </md-card>
   </div>
@@ -18,10 +27,15 @@
     <md-card>
       <md-card-title>
         Progress
-        <button class="title-button" md-button><md-icon>trending_up</md-icon></button>
-      </md-card-title>
+        <a routerLink="/goals"><button class="title-button" md-button><md-icon>trending_up</md-icon></button></a>
+        </md-card-title>
       <md-card-content>
-
+        <md-tab-group>
+          <md-tab label="Week">Content 1</md-tab>
+          <md-tab label="Month">Content 2</md-tab>
+          <md-tab label="Year">Content 1</md-tab>
+          <md-tab label="All Time">Content 2</md-tab>
+        </md-tab-group>
       </md-card-content>
     </md-card>
   </div>
@@ -30,11 +44,11 @@
     <md-card>
       <md-card-title>
         Interests
-        <button class="title-button" md-button><md-icon>favorite</md-icon></button>
+        <a routerLink="/interests"><button class="title-button" md-button><md-icon>favorite</md-icon></button></a>
       </md-card-title>
       <md-card-content>
-        <md-nav-list >
-          <md-list-item *ngFor="let i of interests">
+        <md-nav-list>
+          <md-list-item *ngFor="let i of interests; let n = index">
              <img src="assets/images/{{i.avatar}}">
              <a href="">
                <h3 md-line>{{i.title}}</h3>
@@ -43,15 +57,15 @@
              </a>
 
              <div class="upvote">
-               <button class="plain-btn" md-icon-button>
+               <button class="plain-btn" md-icon-button (click)="toggleLike(n)" [class.liked]="i.liked">
                   <md-icon>thumb_up</md-icon>
                </button>
                <div class="number">{{i.upvotes}}</div>
              </div>
-
           </md-list-item>
         </md-nav-list>
       </md-card-content>
     </md-card>
   </div>
+
 </div>

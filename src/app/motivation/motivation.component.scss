@@ -35,6 +35,22 @@
 .li-content {
   display: inline-block;
 }
+.show-on-hover {
+  opacity: 0.3;
+}
+.show-on-hover:hover {
+  opacity: 1;
+}
+.delete-btn {
+  @extend .plain-btn;
+}
+.delete-btn:hover {
+  background-color: $warning-light;
+  md-icon {
+    color: $warning;
+  }
+}
+
 
 md-list-item img {
   width: 50px;
@@ -54,10 +70,15 @@ md-list-item a p {
   font-size: 12px;
 }
 
+.liked {
+  md-icon {
+    color: $a400;
+  }
+}
+
 
 md-checkbox {
   display: block;
-  margin-bottom: 10px;
 }
 button {
   background-color: $a400;
@@ -69,25 +90,6 @@ button md-icon {
   float: right;
 }
 
-
-.checkbox-label {
-  margin-bottom: 10px;
-  display: block;
-  height: 25px;
-
+.center {
+  text-align: center;
 }
-
-.checkbox {
-  margin-bottom: -5px;
-}
-/*.checkbox-label label {
-  line-height: 25px;
-  vertical-align: middle;
-}*/
-
-
-/*
-md-checkbox {
-  display: flex;
-  margin-bottom: 10px;
-}*/

@@ -149,3 +149,10 @@ input[type='checkbox']:checked {
 .mat-card {
   background-color: whitesmoke;
 }
+
+
+.mat-tab-label {
+  height: 30px !important;
+  line-height: 30px !important;
+  min-width: 20px !important;
+}
