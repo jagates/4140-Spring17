@@ -23,5 +23,8 @@ export class EventsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  addEvent(index: number):void{
+     this.myEvents.push(this.events[index]);
+     this.events.splice(index,1);
+  }
 }
