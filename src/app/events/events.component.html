@@ -1,22 +1,29 @@
-<h1>Events</h1>
+<h1 style="margin:20px 0px;">Events</h1>
 
-<md-list>
-  <md-card>
-  <md-list-item> 
-    <img md-list-avatar src="assets/images/profile-pic.png">
-    <span>5K Anderson, SC</span>
-  </md-list-item>
-  </md-card>
-  <md-card>
-  <md-list-item> 
-    <img md-list-avatar src="assets/images/profile-pic.png">
-    <span>Annual Color Run Clemson, SC</span>
-  </md-list-item>
-  </md-card>
-  <md-card>
-  <md-list-item> 
-    <img md-list-avatar src="assets/images/profile-pic.png">
-    <span>Group Workout Fike</span>
-  </md-list-item>
-  </md-card>
-</md-list>
+<h2>Your Events</h2>
+<div class="tile-grid" *ngFor="let event of myEvents">
+    <md-card>
+      <md-card-title>
+          {{event.title}}
+      </md-card-title>
+      <md-card-content>
+          <span>{{event.date}}</span>
+          <div><img src="assets/images/{{event.avatar}}" style="margin:0px 20px; max-width: 350px; max-height: 350px;"></div>
+          <span>{{event.description}}</span>
+      </md-card-content>
+    </md-card>
+</div>
+
+<h2>Events Near You</h2>
+<div class="tile-grid" *ngFor="let event of events">
+    <md-card>
+      <md-card-title>
+          {{event.title}}
+      </md-card-title>
+      <md-card-content>
+          <span>{{event.date}}</span>
+          <div><img src="assets/images/{{event.avatar}}" style="margin:0px 20px; max-width: 350px; max-height: 350px;"></div>
+          <div style="clear: both">{{event.description}}</div>
+      </md-card-content>
+    </md-card>
+</div>
