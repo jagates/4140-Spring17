@@ -93,3 +93,63 @@ button md-icon {
 .center {
   text-align: center;
 }
+
+.progress-content {
+  text-align: center;
+  margin-top: 10px;
+
+}
+
+.progress-box {
+  width: 30%;
+  float: left;
+  margin-left: 10px;
+  display: inline-block;
+  text-align: center;
+
+}
+.progress-box-content {
+  margin-top: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  color: white;
+  border-radius: 5px;
+  width: 120px !important;
+  min-height: 120px;
+  vertical-align: center;
+  font-size: 30px;
+  background-color: $m400;
+  cursor: pointer;
+
+  p {
+    margin-bottom: 10px;
+    font-size: 12px;
+
+    span {
+      font-size: 20px;
+    }
+  }
+
+}
+.progress-box-graph {
+  width: 120px !important;
+  height: 120px;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: 1px solid $m400;
+  cursor: pointer;
+
+}
+
+
+
+.bad {
+  background-color: $warning;
+}
+.good {
+  background-color: #00E676;
+}
+
+md-card {
+  margin-bottom: 10px;
+}

@@ -21,26 +21,8 @@
 
       </md-card-content>
     </md-card>
-  </div>
 
-  <div class="tile half-width">
-    <md-card>
-      <md-card-title>
-        Progress
-        <a routerLink="/goals"><button class="title-button" md-button><md-icon>trending_up</md-icon></button></a>
-        </md-card-title>
-      <md-card-content>
-        <md-tab-group>
-          <md-tab label="Week">Content 1</md-tab>
-          <md-tab label="Month">Content 2</md-tab>
-          <md-tab label="Year">Content 1</md-tab>
-          <md-tab label="All Time">Content 2</md-tab>
-        </md-tab-group>
-      </md-card-content>
-    </md-card>
-  </div>
 
-  <div class="tile half-width">
     <md-card>
       <md-card-title>
         Interests
@@ -68,4 +50,62 @@
     </md-card>
   </div>
 
+  <div class="tile half-width">
+    <md-card>
+      <md-card-title>
+        Progress
+        <a routerLink="/goals"><button class="title-button" md-button><md-icon>trending_up</md-icon></button></a>
+        </md-card-title>
+      <md-card-content>
+        <md-tab-group>
+          <md-tab *ngFor="let p of progressions" label="{{p.label}}">
+            <div class="progress-content">
+              <div class="progress-box">
+                <h4>Weight</h4>
+                <div class="progress-box-content"
+                [class.good]="p.weight < p.wtarget" [class.bad]="p.weight > p.wtarget"
+                *ngIf="!graphbools[0]"
+                (click)="toggleGraph(0)">
+                  <p>Target:<br /><span>{{p.wtarget}}lbs</span></p>
+                  <p>Total:<br /><span><span *ngIf="p.weight > 0">+</span>{{p.weight}}lbs</span></p>
+                </div>
+
+                <img class="progress-box-graph"
+                *ngIf="graphbools[0]"
+                (click)="toggleGraph(0)"
+                src="assets/images/{{p.wgraph}}" />
+
+              </div>
+              <div class="progress-box">
+                <h4>Running</h4>
+                <div class="progress-box-content"
+                [class.good]="p.rtotal > p.rtarget" [class.bad]="p.rtotal < p.rtarget"
+                 *ngIf="!graphbools[1]"
+                 (click)="toggleGraph(1)">
+                  <p>Target:<br /><span>{{p.rtarget}}mi</span></p>
+                  <p>Total:<br /><span>{{p.rtotal}}mi</span></p>
+                  <p>Per Run:<br /><span>{{p.ravg}}mi</span></p>
+                  <!-- <p>Compared to Last:<br /><span><span *ngIf="p.rlast > 0">+</span>{{p.rlast}}mi</span></p> -->
+                </div>
+                <img class="progress-box-graph"
+                *ngIf="graphbools[1]"
+                (click)="toggleGraph(1)"
+                src="assets/images/{{p.rgraph}}" />
+              </div>
+
+              <div class="progress-box">
+                <h4>Calories</h4>
+                <div class="progress-box-content"
+                [class.good]="p.dtotal < p.dtarget" [class.bad]="p.dtotal > p.dtarget"
+                 *ngIf="!graphbools[2]">
+                  <p>Target:<br /><span>{{p.dtarget}}</span></p>
+                  <p>Total:<br /><span>{{p.dtotal}}</span></p>
+                </div>
+              </div>
+            </div>
+          </md-tab>
+        </md-tab-group>
+      </md-card-content>
+    </md-card>
+  </div>
 </div>
