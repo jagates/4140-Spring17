@@ -1,22 +1,33 @@
-<h1>Events</h1>
+<h1 style="margin:20px 0px;">Events</h1>
 
-<md-list>
+<h2>Your Events</h2>
+<div class="tile-grid" *ngFor="let event of myEvents">
   <md-card>
-  <md-list-item> 
-    <img md-list-avatar src="assets/images/profile-pic.png">
-    <span>5K Anderson, SC</span>
-  </md-list-item>
+    <md-card-title>{{event.title}}</md-card-title>
+    <md-card-content>
+      <div>{{event.date}}</div>
+      <table align="center">
+        <tr>
+          <th><span style="display: inline-block"><img src="assets/images/{{event.avatar}}" style="margin:0px 20px; max-width: 350px; max-height: 350px;;"></span></th>
+          <th><p style="display: inline-block;">{{event.description}}</p></th>
+        </tr>
+      </table>
+    </md-card-content>
   </md-card>
+</div>
+
+<h2 style="margin: 20px 0px;">Events Near You</h2>
+<div class="tile-grid" *ngFor="let event of events, let i = index">
   <md-card>
-  <md-list-item> 
-    <img md-list-avatar src="assets/images/profile-pic.png">
-    <span>Annual Color Run Clemson, SC</span>
-  </md-list-item>
+    <md-card-title>{{event.title}}<button style="margin:0px 20px;" md-mini-fab (click)="addEvent(i)"><md-icon >add</md-icon></button></md-card-title>
+    <md-card-content>
+      <div>{{event.date}}</div>
+      <table align="center">
+        <tr>
+          <th><span style="display: inline-block"><img src="assets/images/{{event.avatar}}" style="margin:0px 20px; max-width: 350px; max-height: 350px;;"></span></th>
+          <th><p style="display: inline-block;">{{event.description}}</p></th>
+        </tr>
+      </table>
+    </md-card-content>
   </md-card>
-  <md-card>
-  <md-list-item> 
-    <img md-list-avatar src="assets/images/profile-pic.png">
-    <span>Group Workout Fike</span>
-  </md-list-item>
-  </md-card>
-</md-list>
+</div>
