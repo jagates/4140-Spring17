@@ -107,5 +107,32 @@
         </md-tab-group>
       </md-card-content>
     </md-card>
+
+    <md-card>
+      <md-card-title>
+        Events
+        <a routerLink="/events"><button class="title-button" md-button><md-icon>event</md-icon></button></a>
+      </md-card-title>
+      <md-card-content>
+        <md-nav-list>
+          <md-list-item *ngFor="let i of interests; let n = index">
+             <img src="assets/images/{{i.avatar}}">
+             <a href="">
+               <h3 md-line>{{i.title}}</h3>
+               <p md-line>{{i.source}}</p>
+               <p>{{i.description}}</p>
+             </a>
+
+             <div class="upvote">
+               <button class="plain-btn" md-icon-button (click)="toggleLike(n)" [class.liked]="i.liked">
+                  <md-icon>thumb_up</md-icon>
+               </button>
+               <div class="number">{{i.upvotes}}</div>
+             </div>
+          </md-list-item>
+        </md-nav-list>
+      </md-card-content>
+    </md-card>
+
   </div>
 </div>
