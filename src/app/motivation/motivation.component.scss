@@ -80,11 +80,11 @@ md-list-item a p {
 md-checkbox {
   display: block;
 }
-button {
+.title-button {
   background-color: $a400;
 }
-button md-icon {
-  color: white;
+.title-button md-icon {
+  color: black;
 }
 .title-button {
   float: right;
