@@ -1,0 +1,33 @@
+
+@import "../../scss/colors.scss";
+
+
+.plain-btn {
+  background-color: $lightgray;
+  box-shadow: none;
+}
+.plain-btn md-icon {
+  color: $darkgray;
+}
+
+.li-content {
+  display: inline-block;
+}
+.show-on-hover {
+  opacity: 0.3;
+}
+.show-on-hover:hover {
+  opacity: 1;
+}
+.delete-btn {
+  @extend .plain-btn;
+}
+.delete-btn:hover {
+  background-color: $warning-light;
+  md-icon {
+    color: $warning;
+  }
+}
+button md-icon {
+  color: white;
+}
