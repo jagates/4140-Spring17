@@ -17,9 +17,10 @@ export class MotivationComponent implements OnInit {
   ];
 
   events = [
-    {title: 'Cooper River Bridge Run - 10k', date: '1/1/17', description: 'The Cooper River Bridge Run provides a world-class 10-K foot race. The race promotes continuous physical activity and a healthy lifestyle through education and opportunity.'},
-    {title: 'Cooper River Bridge Run - 10k', date: '1/1/17', description: 'The Cooper River Bridge Run provides a world-class 10-K foot race. The race promotes continuous physical activity and a healthy lifestyle through education and opportunity.'},
-
+    {title: 'Cooper River Bridge Run - 10k', avatar: 'CooperRiver.jpg', date: '1/1/17', description: 'The Cooper River Bridge Run provides a world-class 10-K foot race. The race promotes...', added: false},
+    {title: 'Cooper River Bridge Run - 10k', avatar: 'CooperRiver.jpg', date: '1/1/17', description: 'The Cooper River Bridge Run provides a world-class 10-K foot race. The race promotes...', added: false},
+    {title: 'Cooper River Bridge Run - 10k', avatar: 'CooperRiver.jpg', date: '1/1/17', description: 'The Cooper River Bridge Run provides a world-class 10-K foot race. The race promotes...', added: false},
+    {title: 'Cooper River Bridge Run - 10k', avatar: 'CooperRiver.jpg', date: '1/1/17', description: 'The Cooper River Bridge Run provides a world-class 10-K foot race. The race promotes...', added: false},
   ];
 
   interests = [
@@ -71,5 +72,9 @@ export class MotivationComponent implements OnInit {
 
   toggleGraph(index:number): void {
     this.graphbools[index] = !this.graphbools[index];
+  }
+
+  toggleAdded(index: number): void {
+    this.events[index].added = !this.events[index].added;
   }
 }

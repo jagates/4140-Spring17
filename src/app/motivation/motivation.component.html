@@ -25,7 +25,7 @@
 
     <md-card>
       <md-card-title>
-        Interests
+        Top Interests
         <a routerLink="/interests"><button class="title-button" md-button><md-icon>favorite</md-icon></button></a>
       </md-card-title>
       <md-card-content>
@@ -110,24 +110,23 @@
 
     <md-card>
       <md-card-title>
-        Events
+        Events Near You
         <a routerLink="/events"><button class="title-button" md-button><md-icon>event</md-icon></button></a>
       </md-card-title>
       <md-card-content>
         <md-nav-list>
-          <md-list-item *ngFor="let i of interests; let n = index">
-             <img src="assets/images/{{i.avatar}}">
+          <md-list-item *ngFor="let e of events; let i = index">
+             <img src="assets/images/{{e.avatar}}">
              <a href="">
-               <h3 md-line>{{i.title}}</h3>
-               <p md-line>{{i.source}}</p>
-               <p>{{i.description}}</p>
+               <h3 md-line>{{e.title}}</h3>
+               <p md-line>{{e.date}}</p>
+               <p>{{e.description}}</p>
              </a>
 
              <div class="upvote">
-               <button class="plain-btn" md-icon-button (click)="toggleLike(n)" [class.liked]="i.liked">
-                  <md-icon>thumb_up</md-icon>
+               <button class="plain-btn" md-icon-button (click)="toggleAdded(i)" [class.liked]="e.added">
+                  <md-icon>add</md-icon>
                </button>
-               <div class="number">{{i.upvotes}}</div>
              </div>
           </md-list-item>
         </md-nav-list>
