@@ -1,0 +1,17 @@
+<h1 md-dialog-title>Edit Interests</h1>
+<md-dialog-content>
+    <md-checkbox *ngFor="let interest of interests; let i = index">
+          {{interest}}
+          <button md-icon-button class="delete-btn show-on-hover" (click)=removeInterest(i)><md-icon>delete_forever</md-icon></button>
+        </md-checkbox>
+        <md-checkbox disabled>
+          <md-input-container>
+            <input mdInput placeholder="New Interests" [(ngModel)]="newInterest" (keyup.enter)="addNewInterest()">
+          </md-input-container>
+          <button md-mini-fab (click)="addNewInterest()"><md-icon>add</md-icon></button>
+        </md-checkbox>
+</md-dialog-content>
+<md-dialog-actions>
+  <button md-button (click)="dialogRef.close('Option 1')">Close</button>
+  <button md-button (click)="dialogRef.close('Option 2')">Save</button>
+</md-dialog-actions>
