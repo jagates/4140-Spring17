@@ -1,21 +1,41 @@
 <h1 style="margin:20px 0px;">People</h1>
 
-<h2>Your Connections</h2>
-<md-list>
-  <md-card *ngFor="let c of myConnections" style="margin:10px 0px;">
-    <md-list-item> 
-      <img md-list-avatar src="assets/images/{{c.avatar}}" style="margin:0px 20px">
-      <span>{{c.first}} {{c.last}}</span>
-    </md-list-item>
-  </md-card>
-</md-list>
+<div class="tile-grid">
+<div class="tile half-width">
+    <md-card>
+      <md-card-title *ngIf="myConnections.length > 0;">Your Connections</md-card-title>
+      <md-nav-list>
+        <md-list-item *ngFor="let c of myConnections, let i = index" style="margin:10px 10px">
+          <img src="assets/images/{{c.avatar}}">
+            <a href="">
+              <div>{{c.first}}{{c.last}}</div>
+            </a>
+            <div>
+              <button md-mini-fab (click)="removePerson(i)">
+                <md-icon style="color: white;">clear</md-icon>
+              </button>
+            </div>
+          </md-list-item>
+        </md-nav-list>
+    </md-card>
+  </div>
 
-<h2 style="margin:20px 0px;">People Near You</h2>
-<md-list>
-  <md-card *ngFor="let c of people, let i = index" style="margin:10px 0px;">
-    <md-list-item> 
-      <img md-list-avatar src="assets/images/{{c.avatar}}" style="margin:0px 20px">
-      <span>{{c.first}} {{c.last}}<button style="margin:0px 20px;" md-mini-fab (click)="addPerson(i)"><md-icon >add</md-icon></button></span>
-    </md-list-item>
-  </md-card>
-</md-list>
+  <div class="tile half-width">
+    <md-card>
+      <md-card-title *ngIf="people.length > 0;">People Near You</md-card-title>
+      <md-nav-list>
+        <md-list-item *ngFor="let c of people, let i = index" style="margin:10px 10px">
+          <img src="assets/images/{{c.avatar}}">
+            <a href="">
+              <div>{{c.first}}{{c.last}}</div>
+            </a>
+            <div>
+              <button md-mini-fab (click)="addPerson(i)">
+                <md-icon style="color: white;">person_add</md-icon>
+              </button>
+            </div>
+          </md-list-item>
+        </md-nav-list>
+    </md-card>
+  </div>
+</div>

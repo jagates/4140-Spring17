@@ -1,9 +1,9 @@
 <h1 style="margin:20px 0px;">Events</h1>
 
-<h2>Your Events</h2>
-<div class="tile-grid" *ngFor="let event of myEvents">
+<h2 *ngIf="myEvents.length > 0;">Your Events</h2>
+<div class="tile-grid" *ngFor="let event of myEvents, let i = index">
   <md-card>
-    <md-card-title>{{event.title}}</md-card-title>
+    <md-card-title>{{event.title}}<button style="margin:0px 20px;" md-mini-fab (click)="removeEvent(i)"><md-icon style="color: white;">clear</md-icon></button></md-card-title>
     <md-card-content>
       <div>{{event.date}}</div>
       <table align="center">
@@ -16,10 +16,10 @@
   </md-card>
 </div>
 
-<h2 style="margin: 20px 0px;">Events Near You</h2>
+<h2 *ngIf="events.length > 0;" style="margin: 20px 0px;">Events Near You</h2>
 <div class="tile-grid" *ngFor="let event of events, let i = index">
   <md-card>
-    <md-card-title>{{event.title}}<button style="margin:0px 20px;" md-mini-fab (click)="addEvent(i)"><md-icon >add</md-icon></button></md-card-title>
+    <md-card-title>{{event.title}}<button style="margin:0px 20px;" md-mini-fab (click)="addEvent(i)"><md-icon style="color: white;">add</md-icon></button></md-card-title>
     <md-card-content>
       <div>{{event.date}}</div>
       <table align="center">
