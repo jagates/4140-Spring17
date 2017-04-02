@@ -2,6 +2,11 @@
 @import "theme.scss";
 @import "scss/colors.scss";
 
+
+button md-icon {
+  color: white;
+}
+
 * {
   font-family: 'Roboto', sans-serif;
   padding: 0;
