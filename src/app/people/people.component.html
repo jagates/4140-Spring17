@@ -8,7 +8,7 @@
         <md-list-item *ngFor="let c of myConnections, let i = index" style="margin:10px 10px">
           <img src="assets/images/{{c.avatar}}">
             <a href="">
-              <div>{{c.first}}{{c.last}}</div>
+              <div>{{c.first}} {{c.last}}</div>
             </a>
             <div>
               <button md-mini-fab (click)="removePerson(i)">
@@ -27,7 +27,7 @@
         <md-list-item *ngFor="let c of people, let i = index" style="margin:10px 10px">
           <img src="assets/images/{{c.avatar}}">
             <a href="">
-              <div>{{c.first}}{{c.last}}</div>
+              <div>{{c.first}} {{c.last}}</div>
             </a>
             <div>
               <button md-mini-fab (click)="addPerson(i)">
