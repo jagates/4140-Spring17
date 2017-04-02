@@ -1,18 +1,80 @@
-<h1>Interests</h1>
+<h1>Interests</h1> <a (click)="openEditInterests()"><md-icon>create</md-icon></a>
 
 <div class="tile-grid">
   <div class="tile half-width">
     <md-card>
-      <md-card-title>
+      <md-card-title> 
         Weight Loss
       </md-card-title>
       <md-card-content>
-        <md-nav-list dense>
-            <a md-list-item href="..." *ngFor="let wArticle of messages">
-                <md-icon md-list-icon>receipt</md-icon>
-                <h3 md-line>{{ wArticle.from }} </h3>
-                <p md-line> {{wArticle.subject}} </p>
-            </a>
+        <md-nav-list>
+          <md-list-item *ngFor="let i of wlNews; let n = index">
+             <img src="assets/images/{{i.avatar}}">
+             <a href="{{i.link}}" target="_blank">
+               <h3 md-line>{{i.title}}</h3>
+               <p md-line>{{i.source}}</p>
+               <p>{{i.description}}</p>
+             </a>
+
+             <div class="upvote">
+               <button class="plain-btn" md-icon-button (click)="togglewlLike(n)" [class.liked]="i.liked">
+                  <md-icon>thumb_up</md-icon>
+               </button>
+               <div class="number">{{i.upvotes}}</div>
+             </div>
+          </md-list-item>
+        </md-nav-list>
+      </md-card-content>
+    </md-card>
+  </div>
+  <div class="tile half-width">
+    <md-card>
+      <md-card-title>
+        Paleo Diet
+      </md-card-title>
+      <md-card-content>
+        <md-nav-list>
+          <md-list-item *ngFor="let i of pdNews; let n = index">
+             <img src="assets/images/{{i.avatar}}">
+             <a href="{{i.link}}" target="_blank">
+               <h3 md-line>{{i.title}}</h3>
+               <p md-line>{{i.source}}</p>
+               <p>{{i.description}}</p>
+             </a>
+
+             <div class="upvote">
+               <button class="plain-btn" md-icon-button (click)="togglepdLike(n)" [class.liked]="i.liked">
+                  <md-icon>thumb_up</md-icon>
+               </button>
+               <div class="number">{{i.upvotes}}</div>
+             </div>
+          </md-list-item>
+        </md-nav-list>
+      </md-card-content>
+    </md-card>
+  </div>
+  <div class="tile half-width">
+    <md-card>
+      <md-card-title>
+        Cardio
+      </md-card-title>
+      <md-card-content>
+        <md-nav-list>
+          <md-list-item *ngFor="let i of caNews; let n = index">
+             <img src="assets/images/{{i.avatar}}">
+             <a href="{{i.link}}" target="_blank">
+               <h3 md-line>{{i.title}}</h3>
+               <p md-line>{{i.source}}</p>
+               <p>{{i.description}}</p>
+             </a>
+
+             <div class="upvote">
+               <button class="plain-btn" md-icon-button (click)="togglecaLike(n)" [class.liked]="i.liked">
+                  <md-icon>thumb_up</md-icon>
+               </button>
+               <div class="number">{{i.upvotes}}</div>
+             </div>
+          </md-list-item>
         </md-nav-list>
       </md-card-content>
     </md-card>
