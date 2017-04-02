@@ -1,0 +1,42 @@
+@import "../../scss/colors.scss";
+
+md-list-item img {
+  width: 50px;
+  height: 50px;
+  margin-left: -10px;
+  margin-right: 10px;
+  border-radius: 10%;
+}
+md-list-item a  {
+  width: 450px;
+}
+md-list-item a h3 {
+  color: $m800;
+  font-size: 15px;
+}
+md-list-item a p {
+  font-size: 12px;
+}
+
+button {
+  background-color: $a400;
+}
+button md-icon {
+  color: white;
+}
+.title-button {
+  float: right;
+}
+.plain-btn {
+  background-color: $lightgray;
+  box-shadow: none;
+}
+.plain-btn md-icon {
+  color: $darkgray;
+}
+
+.liked {
+  md-icon {
+    color: $a400;
+  }
+}

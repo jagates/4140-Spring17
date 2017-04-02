@@ -3,10 +3,10 @@
     <md-list>
     <md-list-item>
         <md-input-container class="example-full-width">
-         <input mdInput placeholder="First Name">
+         <input mdInput value="John" placeholder="First Name">
         </md-input-container>
         <md-input-container class="example-full-width">
-         <input mdInput placeholder="Last Name">
+         <input mdInput value="Doe" placeholder="Last Name">
         </md-input-container>
     </md-list-item>
     <md-list-item>
@@ -16,10 +16,10 @@
     </md-list-item>
     <md-list-item>
         <md-input-container class="example-full-width">
-         <input mdInput placeholder="User Name">
+         <input mdInput value="jdoe45" placeholder="User Name">
         </md-input-container>
         <md-input-container class="example-full-width">
-         <input type="email" mdInput placeholder="E-Mail Address">
+         <input type="email" value="test@example.com" mdInput placeholder="E-Mail Address">
         </md-input-container>
     </md-list-item>
     <md-list-item>
@@ -28,6 +28,7 @@
         </md-input-container>
     </md-list-item>
     </md-list>
+
 </md-dialog-content>
 <md-dialog-actions>
   <button md-button (click)="dialogRef.close('Option 1')">Close</button>
