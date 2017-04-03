@@ -17,10 +17,10 @@ export class MotivationComponent implements OnInit {
   ];
 
   events = [
-    {title: 'Cooper River Bridge Run - 10k', avatar: 'CooperRiver.jpg', date: '1/1/17', description: 'The Cooper River Bridge Run provides a world-class 10-K foot race. The race promotes...', added: false},
-    {title: 'Cooper River Bridge Run - 10k', avatar: 'CooperRiver.jpg', date: '1/1/17', description: 'The Cooper River Bridge Run provides a world-class 10-K foot race. The race promotes...', added: false},
-    {title: 'Cooper River Bridge Run - 10k', avatar: 'CooperRiver.jpg', date: '1/1/17', description: 'The Cooper River Bridge Run provides a world-class 10-K foot race. The race promotes...', added: false},
-    {title: 'Cooper River Bridge Run - 10k', avatar: 'CooperRiver.jpg', date: '1/1/17', description: 'The Cooper River Bridge Run provides a world-class 10-K foot race. The race promotes...', added: false},
+    {title: 'Anderson Annual Charity 5k', date: '4/16/17', avatar: '5k.png', description: 'Come join us as we run for a cause in downtown Anderson!', added: false},
+    {title: 'Fike Group Workout', date: '4/20/17', avatar: 'WeightLifting.png',  description: 'Come join us at Fike Recreational Center at 8:00 PM for a group workout! Must have a valid CUID...', added: false},
+    {title: 'Cooper River Bridge Run - 10k', date: '5/21/17', avatar: 'CooperRiver.jpg', description: 'The Cooper River Bridge Run provides a world-class 10-K foot race. The race promotes...', added: false},
+    {title: 'Clemson Annual Color Run', date: '4/6/17', avatar: 'ColorRun.jpg', description: 'The Color Run, also known as the Happiest 5k on the Planet, is a unique paint race that celebrates...', added: false},
   ];
 
   interests = [
