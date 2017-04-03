@@ -17,10 +17,11 @@ export class PeopleComponent implements OnInit {
    { first: 'Arnold', last: 'Cunningham', avatar: 'ArnoldProfile.jpg'},
    { first: 'Nick', last: 'Bottom', avatar: 'NickProfile.jpg'},
    { first: 'Monty', last: 'Python', avatar: 'MontyProfile.jpg'},
-   { first: 'Shamar', last: 'Collins', avatar: 'Shamar Collins.jpg'},
-   { first: 'Emma', last: 'Watson', avatar: 'emma watson.jpg'},
-   { first: 'Lim', last: 'Jahey', avatar: 'Lim Jahey.jpg'},
-   { first: 'Madison', last: 'Woschkolup', avatar: 'Madiso Woschkolup.jpg'},
+   { first: 'Shamar', last: 'Collins', avatar: 'ShamarProfile.jpg'},
+   { first: 'Emma', last: 'Watson', avatar: 'EmmaProfile.jpg'},
+   { first: 'Lim', last: 'Jahey', avatar: 'LimProfile.jpg'},
+   { first: 'Madison', last: 'Woschkolup', avatar: 'MadisonProfile.jpg'},
+   { first: 'Simon', last: 'Democko', avatar: 'SimonProfile.jpg'},
 
    ];
 
