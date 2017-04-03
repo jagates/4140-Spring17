@@ -25,7 +25,7 @@ export class GoalsComponent implements OnInit {
   ];
 
   goals2:string[] = [
-    'Quit Smoking',
+    'Continue Paleo Diet',
     'Get a six pack',
     'Bench 215 LBS',
   ];
