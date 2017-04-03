@@ -1,3 +1,25 @@
+@import "../../scss/colors.scss";
+
 md-checkbox {
   display: block;
+}
+.plain-btn {
+  background-color: white;
+  box-shadow: none;
+}
+.plain-btn md-icon {
+  color: $darkgray;
+}
+.delete-btn {
+  @extend .plain-btn;
+}
+.delete-btn:hover {
+  background-color: $warning-light;
+  md-icon {
+    color: $warning;
+  }
+}
+
+button md-icon {
+  color: white;
 }

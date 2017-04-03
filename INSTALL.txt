@@ -1,0 +1,16 @@
+﻿Compilation instructions:
+
+
+To compile the program, you need to install:
+* Node JS LTS version
+   * https://nodejs.org/en/
+* NPM (will be installed with NodeJS)
+* Angular CLI, Install with (Root privileges needed)
+   * Npm install -g angular-cli
+
+
+After all of those are installed, go to the root directory of the project and run the following command
+* Npm install
+The command will install all dependencies for the project and after that command is done, run:
+* Ng serve
+This will launch the server at localhost:4200
